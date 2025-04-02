@@ -1,0 +1,47 @@
+<html>
+  <head> 
+    <title>2-player Tic Tac Toe</title>
+    <style>
+ table{font-size: 40px; 
+        font-family: 'Courier New', Courier, monospace; }
+ </style>
+</head>
+<body>
+  <table id="board"></table>
+  <p id=:currentPlayer">Current Player: x </p>
+  <button onclick="init()">New Game</button>
+  <script src="tictactoe.js"></script>
+</body>
+</html>
+const Player_"X";
+const Player_"O";
+const board = document.getElementById("board");
+let playerName = Player_X;
+ function makeColumnHtml(id, marker) {
+ return `<td id="${id}" onclick="cellClick(this)">[${marker}]</td>`;
+}
+function cellClick(cell) {
+ cell.innerHTML =  makeColumnHtml(cell.id, player);
+ switchPlayer();
+}
+ function displayPlayerName(){
+  document.getElementById("currentPlayer").innerText = "Current Player: " + plakyerName;
+}
+ function switchPlayer(){
+  playerName = (playerName == PLAYER_X) ? PLAYER_O : PLAYER_X; 
+  displayPlayerName();
+}
+ function init(){
+  playerName = PLAYER_X;
+  displayPlayerName();
+  let boardHtml = "";
+
+for (let ix = 0; ix < 3; ix++) {
+ boardHtml += makeColumnHtml(`${ix}_${js}`, "_");
+}
+ boardHtml += "</tr>";
+}
+board.innerHTML = boardHtml;
+}
+init();
+}
